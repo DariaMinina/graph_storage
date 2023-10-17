@@ -27,9 +27,7 @@ class Relationship {
     Relationship(Node *start, Node *end, const std::string &attrs);
 
     virtual ~Relationship(){};
-    virtual Relationship *clone() const {
-        return new Relationship(first, second);
-    }
+    virtual Relationship *clone() const { return new Relationship(first, second); }
     /**
      * @param start
      * @param end
