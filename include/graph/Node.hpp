@@ -1,7 +1,8 @@
 #include <sstream>
 #include <string>
 
-namespace analyzer {
+namespace graph_storage {
+namespace graph {
 
 /**
  * Base node class.  Subclass this to make different types of nodes.
@@ -32,4 +33,5 @@ class Node {
     char remaining_byte;        // for future use
 };
 
-} // namespace analyzer
+} // namespace graph
+} // namespace graph_storage

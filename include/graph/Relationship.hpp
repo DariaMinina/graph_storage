@@ -1,6 +1,7 @@
 #include "Node.hpp"
 
-namespace analyzer {
+namespace graph_storage {
+namespace graph {
 
 /**
  * Simple object to store pointers to two nodes
@@ -10,9 +11,9 @@ namespace analyzer {
 class Relationship {
   public:
     /// the Node* with the lowest memory address
-    analyzer::Node *first;
+    Node *first;
     /// the Node* with the lowest memory address
-    analyzer::Node *second;
+    Node *second;
 
     /**
      * creates an edge between start and end.  For undirected nodes, order does
@@ -60,4 +61,5 @@ class Relationship {
     char relationship_type;
 };
 
-} // namespace analyzer
+} // namespace graph
+} // namespace graph_storage

@@ -1,7 +1,7 @@
 #include "graph/Node.hpp"
 #include <iostream>
 
-using namespace analyzer;
+using namespace graph_storage::graph;
 
 Node::Node() {
     // std::cout << "Node Constructor: " << this << " " << toString() <<
