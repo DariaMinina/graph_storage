@@ -1,0 +1,772 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		4EC918CB09D64779AA274D17 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 51B5A9929215435B8706F7A7 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				E803435B51CA74282A493401 /* Generate CMakeFiles/ZERO_CHECK */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		BE47284EAC004AEBA58D5E0B /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 35DC94051C8A4F8DB3EF1D9B /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				19EA1009DAAB1AFA8818FE10 /* Generate CMakeFiles/ALL_BUILD */,
+			);
+			dependencies = (
+				9B6BFF6B4D0440C9A0A0E9BB /* PBXTargetDependency */,
+				D451E2A5317147A7A67FD14F /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		4798EA85136A4F029A860C45 /* /Users/dascha/Desktop/graph_storage/protoc/graph_build/graph_classes.pb.h */ = {isa = PBXBuildFile; fileRef = CD4664A29C684E1FBFF70CE6 /* /Users/dascha/Desktop/graph_storage/protoc/graph_build/graph_classes.pb.h */; };
+		7E4CA25166B54A88B2FBADCE /* /Users/dascha/Desktop/graph_storage/protoc/graph_build/graph_classes.pb.h.rule */ = {isa = PBXBuildFile; fileRef = 9E0A6D46313643CEA237F959 /* /Users/dascha/Desktop/graph_storage/protoc/graph_build/graph_classes.pb.h.rule */; };
+		BE4DFDA8703B459493641CA2 /* /Users/dascha/Desktop/graph_storage/protoc/graph/main.cpp */ = {isa = PBXBuildFile; fileRef = 781BFC78D4784808B35157F0 /* /Users/dascha/Desktop/graph_storage/protoc/graph/main.cpp */; };
+		C6436EEAECEE43E4ACBB3E7B /* /Users/dascha/Desktop/graph_storage/protoc/graph_build/graph_classes.pb.cc */ = {isa = PBXBuildFile; fileRef = AA9449BCA300446BB4FF3316 /* /Users/dascha/Desktop/graph_storage/protoc/graph_build/graph_classes.pb.cc */; };
+		EA707A8CE27F4D9DB2AF01ED /* /Users/dascha/Desktop/graph_storage/protoc/graph/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = D62C5C64376044C3AD76E0BE /* /Users/dascha/Desktop/graph_storage/protoc/graph/CMakeLists.txt */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		00CC4F6E16B64DAD822016F5 /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		384CA06C99B645ECB17D9DE2 /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		90E3B6E1C74F4086A5F6C06C /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+		A5A72CF33B4A4F85955872A9 /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		21346A117B624F5099E78E4C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B667EE9A97E64BC0BB13F9FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4EC918CB09D64779AA274D17;
+			remoteInfo = ZERO_CHECK;
+		};
+		3CA4DFB729224742827E5AB5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B667EE9A97E64BC0BB13F9FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4EC918CB09D64779AA274D17;
+			remoteInfo = ZERO_CHECK;
+		};
+		8D27B388D7D94118ADB9F347 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B667EE9A97E64BC0BB13F9FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 83C21A040D334953BD876BF7;
+			remoteInfo = main;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		781BFC78D4784808B35157F0 /* /Users/dascha/Desktop/graph_storage/protoc/graph/main.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = main.cpp; path = main.cpp; sourceTree = SOURCE_ROOT; };
+		9E0A6D46313643CEA237F959 /* /Users/dascha/Desktop/graph_storage/protoc/graph_build/graph_classes.pb.h.rule */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = graph_classes.pb.h.rule; path = /Users/dascha/Desktop/graph_storage/protoc/graph_build/graph_classes.pb.h.rule; sourceTree = "<absolute>"; };
+		AA9449BCA300446BB4FF3316 /* /Users/dascha/Desktop/graph_storage/protoc/graph_build/graph_classes.pb.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = graph_classes.pb.cc; path = /Users/dascha/Desktop/graph_storage/protoc/graph_build/graph_classes.pb.cc; sourceTree = "<absolute>"; };
+		CD4664A29C684E1FBFF70CE6 /* /Users/dascha/Desktop/graph_storage/protoc/graph_build/graph_classes.pb.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = graph_classes.pb.h; path = /Users/dascha/Desktop/graph_storage/protoc/graph_build/graph_classes.pb.h; sourceTree = "<absolute>"; };
+		D62C5C64376044C3AD76E0BE /* /Users/dascha/Desktop/graph_storage/protoc/graph/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		D752F49D838E4C24A84DFDB4 /* /Users/dascha/Desktop/graph_storage/protoc/graph/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		F74D74E192A74A4EA5D5B36F /* main */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = main; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6ACABFBC6CB94423A10EAF5B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6AC5FFA3BF1644EFB5BD01CA /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				9DF41BBFC406481DADDD795C /* CMake Rules */,
+				D752F49D838E4C24A84DFDB4 /* /Users/dascha/Desktop/graph_storage/protoc/graph/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		6CD5395A58F1485CA6CEB7E3 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				CD4664A29C684E1FBFF70CE6 /* /Users/dascha/Desktop/graph_storage/protoc/graph_build/graph_classes.pb.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		879F8464071247C4975350D0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9161E36D846049C5B21BFAB3 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+				9E0A6D46313643CEA237F959 /* /Users/dascha/Desktop/graph_storage/protoc/graph_build/graph_classes.pb.h.rule */,
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		9DF41BBFC406481DADDD795C /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		9F0C6B96304841D7A4C3BC21 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				ABE5A7AAE5E94FE3A3F78136 /* Source Files */,
+				6CD5395A58F1485CA6CEB7E3 /* Header Files */,
+				9161E36D846049C5B21BFAB3 /* CMake Rules */,
+				D62C5C64376044C3AD76E0BE /* /Users/dascha/Desktop/graph_storage/protoc/graph/CMakeLists.txt */,
+			);
+			name = main;
+			sourceTree = "<group>";
+		};
+		ABE5A7AAE5E94FE3A3F78136 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				781BFC78D4784808B35157F0 /* /Users/dascha/Desktop/graph_storage/protoc/graph/main.cpp */,
+				AA9449BCA300446BB4FF3316 /* /Users/dascha/Desktop/graph_storage/protoc/graph_build/graph_classes.pb.cc */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		BC267AA829D4415AA437EC4C = {
+			isa = PBXGroup;
+			children = (
+				9F0C6B96304841D7A4C3BC21 /* main */,
+				6AC5FFA3BF1644EFB5BD01CA /* ALL_BUILD */,
+				E87685A96E9E4F4991001270 /* Products */,
+				879F8464071247C4975350D0 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E87685A96E9E4F4991001270 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F74D74E192A74A4EA5D5B36F /* main */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		83C21A040D334953BD876BF7 /* main */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF44C8F13F6A4E4A845D1890 /* Build configuration list for PBXNativeTarget "main" */;
+			buildPhases = (
+				6A02C449DFA9959004BB24B5 /* Generate graph_classes.pb.cc */,
+				2A8270C46AD0400E82316532 /* Sources */,
+				6ACABFBC6CB94423A10EAF5B /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A6100BEE14AC4506A27B2480 /* PBXTargetDependency */,
+			);
+			name = main;
+			productName = main;
+			productReference = F74D74E192A74A4EA5D5B36F /* main */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B667EE9A97E64BC0BB13F9FA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1420;
+			};
+			buildConfigurationList = 6ED44EF50BCB469891BC1254 /* Build configuration list for PBXProject "Project" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				00CC4F6E16B64DAD822016F5 /* Debug */,
+				384CA06C99B645ECB17D9DE2 /* Release */,
+				A5A72CF33B4A4F85955872A9 /* MinSizeRel */,
+				90E3B6E1C74F4086A5F6C06C /* RelWithDebInfo */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = BC267AA829D4415AA437EC4C;
+			projectDirPath = /Users/dascha/Desktop/graph_storage/protoc/graph;
+			projectRoot = "";
+			targets = (
+				BE47284EAC004AEBA58D5E0B /* ALL_BUILD */,
+				4EC918CB09D64779AA274D17 /* ZERO_CHECK */,
+				83C21A040D334953BD876BF7 /* main */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		19EA1009DAAB1AFA8818FE10 /* Generate CMakeFiles/ALL_BUILD */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate CMakeFiles/ALL_BUILD";
+			outputPaths = (
+/Users/dascha/Desktop/graph_storage/protoc/graph_build/CMakeFiles/ALL_BUILD			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/dascha/Desktop/graph_storage/protoc/graph_build
+  echo Build\\ all\\ projects
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd /Users/dascha/Desktop/graph_storage/protoc/graph_build
+  echo Build\\ all\\ projects
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd /Users/dascha/Desktop/graph_storage/protoc/graph_build
+  echo Build\\ all\\ projects
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd /Users/dascha/Desktop/graph_storage/protoc/graph_build
+  echo Build\\ all\\ projects
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		3C0110FC8322DE7E50886E21 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		6A02C449DFA9959004BB24B5 /* Generate graph_classes.pb.cc */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+/Users/dascha/Desktop/graph_storage/protoc/graph/graph_classes.proto,/usr/local/bin/protoc			);
+			name = "Generate graph_classes.pb.cc";
+			outputPaths = (
+/Users/dascha/Desktop/graph_storage/protoc/graph_build/graph_classes.pb.cc,/Users/dascha/Desktop/graph_storage/protoc/graph_build/graph_classes.pb.h			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/dascha/Desktop/graph_storage/protoc/graph_build
+  /usr/local/bin/protoc --cpp_out /Users/dascha/Desktop/graph_storage/protoc/graph_build -I /Users/dascha/Desktop/graph_storage/protoc/graph /Users/dascha/Desktop/graph_storage/protoc/graph/graph_classes.proto
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd /Users/dascha/Desktop/graph_storage/protoc/graph_build
+  /usr/local/bin/protoc --cpp_out /Users/dascha/Desktop/graph_storage/protoc/graph_build -I /Users/dascha/Desktop/graph_storage/protoc/graph /Users/dascha/Desktop/graph_storage/protoc/graph/graph_classes.proto
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd /Users/dascha/Desktop/graph_storage/protoc/graph_build
+  /usr/local/bin/protoc --cpp_out /Users/dascha/Desktop/graph_storage/protoc/graph_build -I /Users/dascha/Desktop/graph_storage/protoc/graph /Users/dascha/Desktop/graph_storage/protoc/graph/graph_classes.proto
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd /Users/dascha/Desktop/graph_storage/protoc/graph_build
+  /usr/local/bin/protoc --cpp_out /Users/dascha/Desktop/graph_storage/protoc/graph_build -I /Users/dascha/Desktop/graph_storage/protoc/graph /Users/dascha/Desktop/graph_storage/protoc/graph/graph_classes.proto
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		9B50530E35CC49C82C2FACCF = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		E803435B51CA74282A493401 /* Generate CMakeFiles/ZERO_CHECK */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate CMakeFiles/ZERO_CHECK";
+			outputPaths = (
+/Users/dascha/Desktop/graph_storage/protoc/graph_build/CMakeFiles/ZERO_CHECK			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/dascha/Desktop/graph_storage/protoc/graph_build
+  make -f /Users/dascha/Desktop/graph_storage/protoc/graph_build/CMakeScripts/ReRunCMake.make
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd /Users/dascha/Desktop/graph_storage/protoc/graph_build
+  make -f /Users/dascha/Desktop/graph_storage/protoc/graph_build/CMakeScripts/ReRunCMake.make
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd /Users/dascha/Desktop/graph_storage/protoc/graph_build
+  make -f /Users/dascha/Desktop/graph_storage/protoc/graph_build/CMakeScripts/ReRunCMake.make
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd /Users/dascha/Desktop/graph_storage/protoc/graph_build
+  make -f /Users/dascha/Desktop/graph_storage/protoc/graph_build/CMakeScripts/ReRunCMake.make
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2A8270C46AD0400E82316532 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE4DFDA8703B459493641CA2 /* /Users/dascha/Desktop/graph_storage/protoc/graph/main.cpp */,
+				C6436EEAECEE43E4ACBB3E7B /* /Users/dascha/Desktop/graph_storage/protoc/graph_build/graph_classes.pb.cc */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9B6BFF6B4D0440C9A0A0E9BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 83C21A040D334953BD876BF7 /* main */;
+			targetProxy = 8D27B388D7D94118ADB9F347 /* PBXContainerItemProxy */;
+		};
+		A6100BEE14AC4506A27B2480 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4EC918CB09D64779AA274D17 /* ZERO_CHECK */;
+			targetProxy = 21346A117B624F5099E78E4C /* PBXContainerItemProxy */;
+		};
+		D451E2A5317147A7A67FD14F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4EC918CB09D64779AA274D17 /* ZERO_CHECK */;
+			targetProxy = 3CA4DFB729224742827E5AB5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		17FEBFB60CBF427E8D29E27F /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/dascha/Desktop/graph_storage/protoc/graph_build/MinSizeRel;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/usr/local/include,/Users/dascha/Desktop/graph_storage/protoc/graph_build,"$(inherited)");
+				INSTALL_PATH = "";
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=gnu++17' ";
+				OTHER_LDFLAGS = (" -Wl,-search_paths_first -Wl,-headerpad_max_install_names",/usr/local/lib/libprotobuf.dylib,"$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = main;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/dascha/Desktop/graph_storage/protoc/graph_build/build/main.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		188CC1FAEE0844DFA06A4941 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/dascha/Desktop/graph_storage/protoc/graph_build/Debug;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/usr/local/include,/Users/dascha/Desktop/graph_storage/protoc/graph_build,"$(inherited)");
+				INSTALL_PATH = "";
+				OTHER_CPLUSPLUSFLAGS = "   '-std=gnu++17' ";
+				OTHER_LDFLAGS = (" -Wl,-search_paths_first -Wl,-headerpad_max_install_names",/usr/local/lib/libprotobuf.dylib,"$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = main;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/dascha/Desktop/graph_storage/protoc/graph_build/build/main.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		3351CB1993B54A57ACE07165 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				MACOSX_DEPLOYMENT_TARGET = 12.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk;
+				SYMROOT = /Users/dascha/Desktop/graph_storage/protoc/graph_build/build;
+			};
+			name = Debug;
+		};
+		34E152E8B20B4EDD96DA0AD6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		39510A62787F4B5481BD4B51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		58AA78AEBD2844A990DD3CB1 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		5BF23E9AAC7E4F12A21257A0 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				MACOSX_DEPLOYMENT_TARGET = 12.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = /Users/dascha/Desktop/graph_storage/protoc/graph_build/build;
+			};
+			name = RelWithDebInfo;
+		};
+		5D793BE7B1D148839A92F0E0 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		61AFA78A95094B0CBB678023 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		62C9C77674784797970BD493 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				MACOSX_DEPLOYMENT_TARGET = 12.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = /Users/dascha/Desktop/graph_storage/protoc/graph_build/build;
+			};
+			name = Release;
+		};
+		70618E7530714ACEB91F6BD8 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		8F2123B58E924F07817753C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		B0C4B2AB822F4BDF986102D3 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/dascha/Desktop/graph_storage/protoc/graph_build/RelWithDebInfo;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/usr/local/include,/Users/dascha/Desktop/graph_storage/protoc/graph_build,"$(inherited)");
+				INSTALL_PATH = "";
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG '-std=gnu++17' ";
+				OTHER_LDFLAGS = (" -Wl,-search_paths_first -Wl,-headerpad_max_install_names",/usr/local/lib/libprotobuf.dylib,"$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = main;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/dascha/Desktop/graph_storage/protoc/graph_build/build/main.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		C4E1295A85334E1AAF837545 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		D657B707F3E34BFBA4643391 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				MACOSX_DEPLOYMENT_TARGET = 12.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = /Users/dascha/Desktop/graph_storage/protoc/graph_build/build;
+			};
+			name = MinSizeRel;
+		};
+		DCE13689E31A4C3FA6B8025B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/dascha/Desktop/graph_storage/protoc/graph_build/Release;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/usr/local/include,/Users/dascha/Desktop/graph_storage/protoc/graph_build,"$(inherited)");
+				INSTALL_PATH = "";
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=gnu++17' ";
+				OTHER_LDFLAGS = (" -Wl,-search_paths_first -Wl,-headerpad_max_install_names",/usr/local/lib/libprotobuf.dylib,"$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = main;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/dascha/Desktop/graph_storage/protoc/graph_build/build/main.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		35DC94051C8A4F8DB3EF1D9B /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61AFA78A95094B0CBB678023 /* Debug */,
+				39510A62787F4B5481BD4B51 /* Release */,
+				58AA78AEBD2844A990DD3CB1 /* MinSizeRel */,
+				C4E1295A85334E1AAF837545 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		51B5A9929215435B8706F7A7 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34E152E8B20B4EDD96DA0AD6 /* Debug */,
+				8F2123B58E924F07817753C3 /* Release */,
+				5D793BE7B1D148839A92F0E0 /* MinSizeRel */,
+				70618E7530714ACEB91F6BD8 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		6ED44EF50BCB469891BC1254 /* Build configuration list for PBXProject "Project" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3351CB1993B54A57ACE07165 /* Debug */,
+				62C9C77674784797970BD493 /* Release */,
+				D657B707F3E34BFBA4643391 /* MinSizeRel */,
+				5BF23E9AAC7E4F12A21257A0 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		FF44C8F13F6A4E4A845D1890 /* Build configuration list for PBXNativeTarget "main" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				188CC1FAEE0844DFA06A4941 /* Debug */,
+				DCE13689E31A4C3FA6B8025B /* Release */,
+				17FEBFB60CBF427E8D29E27F /* MinSizeRel */,
+				B0C4B2AB822F4BDF986102D3 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B667EE9A97E64BC0BB13F9FA /* Project object */;
+}

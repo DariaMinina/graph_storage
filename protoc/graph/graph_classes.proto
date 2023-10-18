@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+message Node {
+    string is_in_use = 1;
+    int32 id = 2;
+    int32 first_relationship_id = 3;
+    int32 first_property_id = 4;
+    string label = 5;
+    string remaining_byte = 6;
+}
+
+message Relationship {
+    int32 start_node_id = 1;
+    int32 end_node_id = 2;
+    string relationship_type = 3;
+}

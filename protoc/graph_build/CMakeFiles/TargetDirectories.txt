@@ -1,0 +1,3 @@
+/Users/dascha/Desktop/graph_storage/protoc/graph_build/CMakeFiles/main.dir
+/Users/dascha/Desktop/graph_storage/protoc/graph_build/CMakeFiles/ALL_BUILD.dir
+/Users/dascha/Desktop/graph_storage/protoc/graph_build/CMakeFiles/ZERO_CHECK.dir
