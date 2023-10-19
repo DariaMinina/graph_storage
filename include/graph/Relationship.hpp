@@ -1,3 +1,6 @@
+#ifndef RELATIONSHIP_HPP
+#define RELATIONSHIP_HPP
+
 #include "Node.hpp"
 
 namespace graph_storage {
@@ -61,3 +64,5 @@ private:
 
 } // namespace graph
 } // namespace graph_storage
+
+#endif

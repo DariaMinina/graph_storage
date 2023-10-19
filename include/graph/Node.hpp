@@ -1,3 +1,6 @@
+#ifndef NODE_HPP
+#define NODE_HPP
+
 #include <sstream>
 #include <string>
 
@@ -35,3 +38,5 @@ private:
 
 } // namespace graph
 } // namespace graph_storage
+
+#endif
