@@ -9,7 +9,7 @@ namespace graph {
  * @see analyzer::Graph
  */
 class Relationship {
-  public:
+public:
     /// the Node* with the lowest memory address
     Node *first;
     /// the Node* with the lowest memory address
@@ -53,7 +53,7 @@ class Relationship {
     virtual bool operator<(const Relationship &a) const;
     virtual bool operator==(const Relationship &a) const;
 
-  private:
+private:
     char start_node_id;
     char end_node_id;
     char relationship_type;

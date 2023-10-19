@@ -12,7 +12,7 @@ namespace graph {
  * @see analyzer::Edge
  */
 class Node {
-  public:
+public:
     Node();
     /**
      * The basic node totally ignores this string, but subclasses might not
@@ -24,7 +24,7 @@ class Node {
      */
     virtual std::string to_string() const;
 
-  private:
+private:
     char is_in_use;             // pointer isInUse
     int id;                     // ID of the node
     char first_relationship_id; // first relationship ID
