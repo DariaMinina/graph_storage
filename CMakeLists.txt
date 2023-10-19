@@ -4,13 +4,13 @@ project(graph_storage
         VERSION 0.1)
 set(CMAKE_CXX_STANDARD 17)
 
-if (CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
+if(CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
         MESSAGE("-- Using Clang compiler")
-elseif (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
+elseif(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
         MESSAGE("-- Using GCC compiler")
-elseif (CMAKE_CXX_COMPILER_ID STREQUAL "Intel")
+elseif(CMAKE_CXX_COMPILER_ID STREQUAL "Intel")
         MESSAGE("-- Using Intel compiler")
-elseif (CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
+elseif(CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
         MESSAGE("-- Using MSVC compiler")
 endif()
 
@@ -34,12 +34,21 @@ FetchContent_Declare(fmt
 )
 FetchContent_MakeAvailable(fmt)
 
+find_package(Protobuf REQUIRED)
+
+# check if protobuf was found
+if(PROTOBUF_FOUND)
+        message("-- protobuf found")
+else()
+        message(FATAL_ERROR "-- Cannot find Protobuf")
+endif()
 
 # CCache
 find_program(CCACHE_FOUND ccache)
+
 if(CCACHE_FOUND)
-    set_property(GLOBAL PROPERTY RULE_LAUNCH_COMPILE ccache)
-    set_property(GLOBAL PROPERTY RULE_LAUNCH_LINK ccache)
+        set_property(GLOBAL PROPERTY RULE_LAUNCH_COMPILE ccache)
+        set_property(GLOBAL PROPERTY RULE_LAUNCH_LINK ccache)
 endif(CCACHE_FOUND)
 
 add_subdirectory(src)
