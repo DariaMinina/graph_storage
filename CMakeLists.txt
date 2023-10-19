@@ -26,6 +26,15 @@ mark_as_advanced(
 # Code completion. Generates compile_commands.json
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
+include(FetchContent)
+
+FetchContent_Declare(fmt
+  GIT_REPOSITORY https://github.com/fmtlib/fmt.git
+  GIT_TAG 10.1.1
+)
+FetchContent_MakeAvailable(fmt)
+
+
 # CCache
 find_program(CCACHE_FOUND ccache)
 if(CCACHE_FOUND)
