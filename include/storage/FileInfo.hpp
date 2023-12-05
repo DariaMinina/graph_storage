@@ -1,7 +1,6 @@
 #ifndef FILE_INFO_HPP
 #define FILE_INFO_HPP
 
-#include <cstdint>
 #include <string>
 #include <unistd.h>
 
