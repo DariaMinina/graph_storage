@@ -4,484 +4,450 @@
 #include "graph_classes.pb.h"
 
 #include <algorithm>
-#include "google/protobuf/io/coded_stream.h"
-#include "google/protobuf/extension_set.h"
-#include "google/protobuf/wire_format_lite.h"
-#include "google/protobuf/descriptor.h"
-#include "google/protobuf/generated_message_reflection.h"
-#include "google/protobuf/reflection_ops.h"
-#include "google/protobuf/wire_format.h"
-#include "google/protobuf/generated_message_tctable_impl.h"
+
+#include <google/protobuf/io/coded_stream.h>
+#include <google/protobuf/extension_set.h>
+#include <google/protobuf/wire_format_lite.h>
+#include <google/protobuf/descriptor.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/reflection_ops.h>
+#include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
+#include <google/protobuf/port_def.inc>
+class NodeDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Node> _instance;
+} _Node_default_instance_;
+class RelationshipDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Relationship> _instance;
+} _Relationship_default_instance_;
+static void InitDefaultsscc_info_Node_graph_5fclasses_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-// Must be included last.
-#include "google/protobuf/port_def.inc"
-PROTOBUF_PRAGMA_INIT_SEG
-namespace _pb = ::google::protobuf;
-namespace _pbi = ::google::protobuf::internal;
-namespace _fl = ::google::protobuf::internal::field_layout;
-        template <typename>
-PROTOBUF_CONSTEXPR Node::Node(::_pbi::ConstantInitialized)
-    : _impl_{
-      /*decltype(_impl_.is_in_use_)*/ {
-          &::_pbi::fixed_address_empty_string,
-          ::_pbi::ConstantInitialized{},
-      },
-      /*decltype(_impl_.label_)*/ {
-          &::_pbi::fixed_address_empty_string,
-          ::_pbi::ConstantInitialized{},
-      },
-      /*decltype(_impl_.remaining_byte_)*/ {
-          &::_pbi::fixed_address_empty_string,
-          ::_pbi::ConstantInitialized{},
-      },
-      /*decltype(_impl_.id_)*/ 0,
-      /*decltype(_impl_.first_relationship_id_)*/ 0,
-      /*decltype(_impl_.first_property_id_)*/ 0,
-      /*decltype(_impl_._cached_size_)*/ {},
-    } {}
-struct NodeDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR NodeDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~NodeDefaultTypeInternal() {}
-  union {
-    Node _instance;
-  };
-};
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 NodeDefaultTypeInternal _Node_default_instance_;
-        template <typename>
-PROTOBUF_CONSTEXPR Relationship::Relationship(::_pbi::ConstantInitialized)
-    : _impl_{
-      /*decltype(_impl_.relationship_type_)*/ {
-          &::_pbi::fixed_address_empty_string,
-          ::_pbi::ConstantInitialized{},
-      },
-      /*decltype(_impl_.start_node_id_)*/ 0,
-      /*decltype(_impl_.end_node_id_)*/ 0,
-      /*decltype(_impl_._cached_size_)*/ {},
-    } {}
-struct RelationshipDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR RelationshipDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~RelationshipDefaultTypeInternal() {}
-  union {
-    Relationship _instance;
-  };
-};
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RelationshipDefaultTypeInternal _Relationship_default_instance_;
-static ::_pb::Metadata file_level_metadata_graph_5fclasses_2eproto[2];
-static constexpr const ::_pb::EnumDescriptor**
-    file_level_enum_descriptors_graph_5fclasses_2eproto = nullptr;
-static constexpr const ::_pb::ServiceDescriptor**
-    file_level_service_descriptors_graph_5fclasses_2eproto = nullptr;
-const ::uint32_t TableStruct_graph_5fclasses_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(
-    protodesc_cold) = {
-    ~0u,  // no _has_bits_
-    PROTOBUF_FIELD_OFFSET(::Node, _internal_metadata_),
-    ~0u,  // no _extensions_
-    ~0u,  // no _oneof_case_
-    ~0u,  // no _weak_field_map_
-    ~0u,  // no _inlined_string_donated_
-    ~0u,  // no _split_
-    ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::Node, _impl_.is_in_use_),
-    PROTOBUF_FIELD_OFFSET(::Node, _impl_.id_),
-    PROTOBUF_FIELD_OFFSET(::Node, _impl_.first_relationship_id_),
-    PROTOBUF_FIELD_OFFSET(::Node, _impl_.first_property_id_),
-    PROTOBUF_FIELD_OFFSET(::Node, _impl_.label_),
-    PROTOBUF_FIELD_OFFSET(::Node, _impl_.remaining_byte_),
-    ~0u,  // no _has_bits_
-    PROTOBUF_FIELD_OFFSET(::Relationship, _internal_metadata_),
-    ~0u,  // no _extensions_
-    ~0u,  // no _oneof_case_
-    ~0u,  // no _weak_field_map_
-    ~0u,  // no _inlined_string_donated_
-    ~0u,  // no _split_
-    ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::Relationship, _impl_.start_node_id_),
-    PROTOBUF_FIELD_OFFSET(::Relationship, _impl_.end_node_id_),
-    PROTOBUF_FIELD_OFFSET(::Relationship, _impl_.relationship_type_),
-};
-
-static const ::_pbi::MigrationSchema
-    schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-        {0, -1, -1, sizeof(::Node)},
-        {14, -1, -1, sizeof(::Relationship)},
-};
-
-static const ::_pb::Message* const file_default_instances[] = {
-    &::_Node_default_instance_._instance,
-    &::_Relationship_default_instance_._instance,
-};
-const char descriptor_table_protodef_graph_5fclasses_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-    "\n\023graph_classes.proto\"\206\001\n\004Node\022\021\n\tis_in_"
-    "use\030\001 \001(\t\022\n\n\002id\030\002 \001(\005\022\035\n\025first_relations"
-    "hip_id\030\003 \001(\005\022\031\n\021first_property_id\030\004 \001(\005\022"
-    "\r\n\005label\030\005 \001(\t\022\026\n\016remaining_byte\030\006 \001(\t\"U"
-    "\n\014Relationship\022\025\n\rstart_node_id\030\001 \001(\005\022\023\n"
-    "\013end_node_id\030\002 \001(\005\022\031\n\021relationship_type\030"
-    "\003 \001(\tb\006proto3"
-};
-static ::absl::once_flag descriptor_table_graph_5fclasses_2eproto_once;
-const ::_pbi::DescriptorTable descriptor_table_graph_5fclasses_2eproto = {
-    false,
-    false,
-    253,
-    descriptor_table_protodef_graph_5fclasses_2eproto,
-    "graph_classes.proto",
-    &descriptor_table_graph_5fclasses_2eproto_once,
-    nullptr,
-    0,
-    2,
-    schemas,
-    file_default_instances,
-    TableStruct_graph_5fclasses_2eproto::offsets,
-    file_level_metadata_graph_5fclasses_2eproto,
-    file_level_enum_descriptors_graph_5fclasses_2eproto,
-    file_level_service_descriptors_graph_5fclasses_2eproto,
-};
-
-// This function exists to be marked as weak.
-// It can significantly speed up compilation by breaking up LLVM's SCC
-// in the .pb.cc translation units. Large translation units see a
-// reduction of more than 35% of walltime for optimized builds. Without
-// the weak attribute all the messages in the file, including all the
-// vtables and everything they use become part of the same SCC through
-// a cycle like:
-// GetMetadata -> descriptor table -> default instances ->
-//   vtables -> GetMetadata
-// By adding a weak function here we break the connection from the
-// individual vtables back into the descriptor table.
-PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_graph_5fclasses_2eproto_getter() {
-  return &descriptor_table_graph_5fclasses_2eproto;
+  {
+    void* ptr = &::_Node_default_instance_;
+    new (ptr) ::Node();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::Node::InitAsDefaultInstance();
 }
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Node_graph_5fclasses_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_Node_graph_5fclasses_2eproto}, {}};
+
+static void InitDefaultsscc_info_Relationship_graph_5fclasses_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::_Relationship_default_instance_;
+    new (ptr) ::Relationship();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::Relationship::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Relationship_graph_5fclasses_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_Relationship_graph_5fclasses_2eproto}, {}};
+
+static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_graph_5fclasses_2eproto[2];
+static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_graph_5fclasses_2eproto = nullptr;
+static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_graph_5fclasses_2eproto = nullptr;
+
+const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_graph_5fclasses_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::Node, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::Node, is_in_use_),
+  PROTOBUF_FIELD_OFFSET(::Node, id_),
+  PROTOBUF_FIELD_OFFSET(::Node, first_relationship_id_),
+  PROTOBUF_FIELD_OFFSET(::Node, first_property_id_),
+  PROTOBUF_FIELD_OFFSET(::Node, label_),
+  PROTOBUF_FIELD_OFFSET(::Node, remaining_byte_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::Relationship, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::Relationship, start_node_id_),
+  PROTOBUF_FIELD_OFFSET(::Relationship, end_node_id_),
+  PROTOBUF_FIELD_OFFSET(::Relationship, relationship_type_),
+};
+static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, sizeof(::Node)},
+  { 11, -1, sizeof(::Relationship)},
+};
+
+static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_Node_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_Relationship_default_instance_),
+};
+
+const char descriptor_table_protodef_graph_5fclasses_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
+  "\n\023graph_classes.proto\"\206\001\n\004Node\022\021\n\tis_in_"
+  "use\030\001 \001(\t\022\n\n\002id\030\002 \001(\005\022\035\n\025first_relations"
+  "hip_id\030\003 \001(\005\022\031\n\021first_property_id\030\004 \001(\005\022"
+  "\r\n\005label\030\005 \001(\t\022\026\n\016remaining_byte\030\006 \001(\t\"U"
+  "\n\014Relationship\022\025\n\rstart_node_id\030\001 \001(\005\022\023\n"
+  "\013end_node_id\030\002 \001(\005\022\031\n\021relationship_type\030"
+  "\003 \001(\tb\006proto3"
+  ;
+static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_graph_5fclasses_2eproto_deps[1] = {
+};
+static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_graph_5fclasses_2eproto_sccs[2] = {
+  &scc_info_Node_graph_5fclasses_2eproto.base,
+  &scc_info_Relationship_graph_5fclasses_2eproto.base,
+};
+static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_graph_5fclasses_2eproto_once;
+const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_graph_5fclasses_2eproto = {
+  false, false, descriptor_table_protodef_graph_5fclasses_2eproto, "graph_classes.proto", 253,
+  &descriptor_table_graph_5fclasses_2eproto_once, descriptor_table_graph_5fclasses_2eproto_sccs, descriptor_table_graph_5fclasses_2eproto_deps, 2, 0,
+  schemas, file_default_instances, TableStruct_graph_5fclasses_2eproto::offsets,
+  file_level_metadata_graph_5fclasses_2eproto, 2, file_level_enum_descriptors_graph_5fclasses_2eproto, file_level_service_descriptors_graph_5fclasses_2eproto,
+};
+
 // Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY2
-static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_graph_5fclasses_2eproto(&descriptor_table_graph_5fclasses_2eproto);
+static bool dynamic_init_dummy_graph_5fclasses_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_graph_5fclasses_2eproto)), true);
+
 // ===================================================================
 
+void Node::InitAsDefaultInstance() {
+}
 class Node::_Internal {
  public:
 };
 
-Node::Node(::google::protobuf::Arena* arena)
-    : ::google::protobuf::Message(arena) {
-  SharedCtor(arena);
+Node::Node(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
   // @@protoc_insertion_point(arena_constructor:Node)
 }
-Node::Node(const Node& from) : ::google::protobuf::Message() {
-  Node* const _this = this;
-  (void)_this;
-  new (&_impl_) Impl_{
-      decltype(_impl_.is_in_use_){},
-      decltype(_impl_.label_){},
-      decltype(_impl_.remaining_byte_){},
-      decltype(_impl_.id_){},
-      decltype(_impl_.first_relationship_id_){},
-      decltype(_impl_.first_property_id_){},
-      /*decltype(_impl_._cached_size_)*/ {},
-  };
-  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
-      from._internal_metadata_);
-  _impl_.is_in_use_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.is_in_use_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+Node::Node(const Node& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  is_in_use_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_is_in_use().empty()) {
-    _this->_impl_.is_in_use_.Set(from._internal_is_in_use(), _this->GetArenaForAllocation());
+    is_in_use_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_is_in_use(),
+      GetArena());
   }
-  _impl_.label_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.label_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  label_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_label().empty()) {
-    _this->_impl_.label_.Set(from._internal_label(), _this->GetArenaForAllocation());
+    label_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_label(),
+      GetArena());
   }
-  _impl_.remaining_byte_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.remaining_byte_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  remaining_byte_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_remaining_byte().empty()) {
-    _this->_impl_.remaining_byte_.Set(from._internal_remaining_byte(), _this->GetArenaForAllocation());
+    remaining_byte_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_remaining_byte(),
+      GetArena());
   }
-  ::memcpy(&_impl_.id_, &from._impl_.id_,
-    static_cast<::size_t>(reinterpret_cast<char*>(&_impl_.first_property_id_) -
-    reinterpret_cast<char*>(&_impl_.id_)) + sizeof(_impl_.first_property_id_));
-
+  ::memcpy(&id_, &from.id_,
+    static_cast<size_t>(reinterpret_cast<char*>(&first_property_id_) -
+    reinterpret_cast<char*>(&id_)) + sizeof(first_property_id_));
   // @@protoc_insertion_point(copy_constructor:Node)
 }
-inline void Node::SharedCtor(::_pb::Arena* arena) {
-  (void)arena;
-  new (&_impl_) Impl_{
-      decltype(_impl_.is_in_use_){},
-      decltype(_impl_.label_){},
-      decltype(_impl_.remaining_byte_){},
-      decltype(_impl_.id_){0},
-      decltype(_impl_.first_relationship_id_){0},
-      decltype(_impl_.first_property_id_){0},
-      /*decltype(_impl_._cached_size_)*/ {},
-  };
-  _impl_.is_in_use_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.is_in_use_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.label_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.label_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.remaining_byte_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.remaining_byte_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-}
-Node::~Node() {
-  // @@protoc_insertion_point(destructor:Node)
-  _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
-  SharedDtor();
-}
-inline void Node::SharedDtor() {
-  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.is_in_use_.Destroy();
-  _impl_.label_.Destroy();
-  _impl_.remaining_byte_.Destroy();
-}
-void Node::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
+
+void Node::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_Node_graph_5fclasses_2eproto.base);
+  is_in_use_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  label_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  remaining_byte_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  ::memset(&id_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&first_property_id_) -
+      reinterpret_cast<char*>(&id_)) + sizeof(first_property_id_));
 }
 
-PROTOBUF_NOINLINE void Node::Clear() {
+Node::~Node() {
+  // @@protoc_insertion_point(destructor:Node)
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+void Node::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
+  is_in_use_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  label_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  remaining_byte_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+
+void Node::ArenaDtor(void* object) {
+  Node* _this = reinterpret_cast< Node* >(object);
+  (void)_this;
+}
+void Node::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void Node::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const Node& Node::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_Node_graph_5fclasses_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void Node::Clear() {
 // @@protoc_insertion_point(message_clear_start:Node)
-  ::uint32_t cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.is_in_use_.ClearToEmpty();
-  _impl_.label_.ClearToEmpty();
-  _impl_.remaining_byte_.ClearToEmpty();
-  ::memset(&_impl_.id_, 0, static_cast<::size_t>(
-      reinterpret_cast<char*>(&_impl_.first_property_id_) -
-      reinterpret_cast<char*>(&_impl_.id_)) + sizeof(_impl_.first_property_id_));
-  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+  is_in_use_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  label_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  remaining_byte_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  ::memset(&id_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&first_property_id_) -
+      reinterpret_cast<char*>(&id_)) + sizeof(first_property_id_));
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* Node::_InternalParse(
-    const char* ptr, ::_pbi::ParseContext* ctx) {
-  ptr = ::_pbi::TcParser::ParseLoop(this, ptr, ctx, &_table_.header);
+const char* Node::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // string is_in_use = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          auto str = _internal_mutable_is_in_use();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "Node.is_in_use"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // int32 id = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
+          id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // int32 first_relationship_id = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
+          first_relationship_id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // int32 first_property_id = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 32)) {
+          first_property_id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string label = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+          auto str = _internal_mutable_label();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "Node.label"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string remaining_byte = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
+          auto str = _internal_mutable_remaining_byte();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "Node.remaining_byte"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
   return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
 }
 
-
-PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<3, 6, 0, 41, 2> Node::_table_ = {
-  {
-    0,  // no _has_bits_
-    0, // no _extensions_
-    6, 56,  // max_field_number, fast_idx_mask
-    offsetof(decltype(_table_), field_lookup_table),
-    4294967232,  // skipmap
-    offsetof(decltype(_table_), field_entries),
-    6,  // num_field_entries
-    0,  // num_aux_entries
-    offsetof(decltype(_table_), field_names),  // no aux_entries
-    &_Node_default_instance_._instance,
-    ::_pbi::TcParser::GenericFallback,  // fallback
-  }, {{
-    {::_pbi::TcParser::MiniParse, {}},
-    // string is_in_use = 1;
-    {::_pbi::TcParser::FastUS1,
-     {10, 63, 0, PROTOBUF_FIELD_OFFSET(Node, _impl_.is_in_use_)}},
-    // int32 id = 2;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(Node, _impl_.id_), 63>(),
-     {16, 63, 0, PROTOBUF_FIELD_OFFSET(Node, _impl_.id_)}},
-    // int32 first_relationship_id = 3;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(Node, _impl_.first_relationship_id_), 63>(),
-     {24, 63, 0, PROTOBUF_FIELD_OFFSET(Node, _impl_.first_relationship_id_)}},
-    // int32 first_property_id = 4;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(Node, _impl_.first_property_id_), 63>(),
-     {32, 63, 0, PROTOBUF_FIELD_OFFSET(Node, _impl_.first_property_id_)}},
-    // string label = 5;
-    {::_pbi::TcParser::FastUS1,
-     {42, 63, 0, PROTOBUF_FIELD_OFFSET(Node, _impl_.label_)}},
-    // string remaining_byte = 6;
-    {::_pbi::TcParser::FastUS1,
-     {50, 63, 0, PROTOBUF_FIELD_OFFSET(Node, _impl_.remaining_byte_)}},
-    {::_pbi::TcParser::MiniParse, {}},
-  }}, {{
-    65535, 65535
-  }}, {{
-    // string is_in_use = 1;
-    {PROTOBUF_FIELD_OFFSET(Node, _impl_.is_in_use_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // int32 id = 2;
-    {PROTOBUF_FIELD_OFFSET(Node, _impl_.id_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
-    // int32 first_relationship_id = 3;
-    {PROTOBUF_FIELD_OFFSET(Node, _impl_.first_relationship_id_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
-    // int32 first_property_id = 4;
-    {PROTOBUF_FIELD_OFFSET(Node, _impl_.first_property_id_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
-    // string label = 5;
-    {PROTOBUF_FIELD_OFFSET(Node, _impl_.label_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // string remaining_byte = 6;
-    {PROTOBUF_FIELD_OFFSET(Node, _impl_.remaining_byte_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
-  }},
-  // no aux_entries
-  {{
-    "\4\11\0\0\0\5\16\0"
-    "Node"
-    "is_in_use"
-    "label"
-    "remaining_byte"
-  }},
-};
-
-::uint8_t* Node::_InternalSerialize(
-    ::uint8_t* target,
-    ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+::PROTOBUF_NAMESPACE_ID::uint8* Node::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:Node)
-  ::uint32_t cached_has_bits = 0;
-  (void)cached_has_bits;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
 
   // string is_in_use = 1;
-  if (!this->_internal_is_in_use().empty()) {
-    const std::string& _s = this->_internal_is_in_use();
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "Node.is_in_use");
-    target = stream->WriteStringMaybeAliased(1, _s, target);
+  if (this->is_in_use().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_is_in_use().data(), static_cast<int>(this->_internal_is_in_use().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "Node.is_in_use");
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_is_in_use(), target);
   }
 
   // int32 id = 2;
-  if (this->_internal_id() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::
-        WriteInt32ToArrayWithField<2>(
-            stream, this->_internal_id(), target);
+  if (this->id() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->_internal_id(), target);
   }
 
   // int32 first_relationship_id = 3;
-  if (this->_internal_first_relationship_id() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::
-        WriteInt32ToArrayWithField<3>(
-            stream, this->_internal_first_relationship_id(), target);
+  if (this->first_relationship_id() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(3, this->_internal_first_relationship_id(), target);
   }
 
   // int32 first_property_id = 4;
-  if (this->_internal_first_property_id() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::
-        WriteInt32ToArrayWithField<4>(
-            stream, this->_internal_first_property_id(), target);
+  if (this->first_property_id() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(4, this->_internal_first_property_id(), target);
   }
 
   // string label = 5;
-  if (!this->_internal_label().empty()) {
-    const std::string& _s = this->_internal_label();
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "Node.label");
-    target = stream->WriteStringMaybeAliased(5, _s, target);
+  if (this->label().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_label().data(), static_cast<int>(this->_internal_label().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "Node.label");
+    target = stream->WriteStringMaybeAliased(
+        5, this->_internal_label(), target);
   }
 
   // string remaining_byte = 6;
-  if (!this->_internal_remaining_byte().empty()) {
-    const std::string& _s = this->_internal_remaining_byte();
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "Node.remaining_byte");
-    target = stream->WriteStringMaybeAliased(6, _s, target);
+  if (this->remaining_byte().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_remaining_byte().data(), static_cast<int>(this->_internal_remaining_byte().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "Node.remaining_byte");
+    target = stream->WriteStringMaybeAliased(
+        6, this->_internal_remaining_byte(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target =
-        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-            _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:Node)
   return target;
 }
 
-::size_t Node::ByteSizeLong() const {
+size_t Node::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:Node)
-  ::size_t total_size = 0;
+  size_t total_size = 0;
 
-  ::uint32_t cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // string is_in_use = 1;
-  if (!this->_internal_is_in_use().empty()) {
-    total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_is_in_use());
+  if (this->is_in_use().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_is_in_use());
   }
 
   // string label = 5;
-  if (!this->_internal_label().empty()) {
-    total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_label());
+  if (this->label().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_label());
   }
 
   // string remaining_byte = 6;
-  if (!this->_internal_remaining_byte().empty()) {
-    total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_remaining_byte());
+  if (this->remaining_byte().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_remaining_byte());
   }
 
   // int32 id = 2;
-  if (this->_internal_id() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
+  if (this->id() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
         this->_internal_id());
   }
 
   // int32 first_relationship_id = 3;
-  if (this->_internal_first_relationship_id() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
+  if (this->first_relationship_id() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
         this->_internal_first_relationship_id());
   }
 
   // int32 first_property_id = 4;
-  if (this->_internal_first_property_id() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
+  if (this->first_property_id() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
         this->_internal_first_property_id());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::google::protobuf::Message::ClassData Node::_class_data_ = {
-    ::google::protobuf::Message::CopyWithSourceCheck,
-    Node::MergeImpl
-};
-const ::google::protobuf::Message::ClassData*Node::GetClassData() const { return &_class_data_; }
+void Node::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:Node)
+  GOOGLE_DCHECK_NE(&from, this);
+  const Node* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Node>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:Node)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:Node)
+    MergeFrom(*source);
+  }
+}
 
-
-void Node::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
-  auto* const _this = static_cast<Node*>(&to_msg);
-  auto& from = static_cast<const Node&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:Node)
-  ABSL_DCHECK_NE(&from, _this);
-  ::uint32_t cached_has_bits = 0;
+void Node::MergeFrom(const Node& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:Node)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_is_in_use().empty()) {
-    _this->_internal_set_is_in_use(from._internal_is_in_use());
+  if (from.is_in_use().size() > 0) {
+    _internal_set_is_in_use(from._internal_is_in_use());
   }
-  if (!from._internal_label().empty()) {
-    _this->_internal_set_label(from._internal_label());
+  if (from.label().size() > 0) {
+    _internal_set_label(from._internal_label());
   }
-  if (!from._internal_remaining_byte().empty()) {
-    _this->_internal_set_remaining_byte(from._internal_remaining_byte());
+  if (from.remaining_byte().size() > 0) {
+    _internal_set_remaining_byte(from._internal_remaining_byte());
   }
-  if (from._internal_id() != 0) {
-    _this->_internal_set_id(from._internal_id());
+  if (from.id() != 0) {
+    _internal_set_id(from._internal_id());
   }
-  if (from._internal_first_relationship_id() != 0) {
-    _this->_internal_set_first_relationship_id(from._internal_first_relationship_id());
+  if (from.first_relationship_id() != 0) {
+    _internal_set_first_relationship_id(from._internal_first_relationship_id());
   }
-  if (from._internal_first_property_id() != 0) {
-    _this->_internal_set_first_property_id(from._internal_first_property_id());
+  if (from.first_property_id() != 0) {
+    _internal_set_first_property_id(from._internal_first_property_id());
   }
-  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void Node::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:Node)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
 }
 
 void Node::CopyFrom(const Node& from) {
@@ -491,253 +457,269 @@ void Node::CopyFrom(const Node& from) {
   MergeFrom(from);
 }
 
-PROTOBUF_NOINLINE bool Node::IsInitialized() const {
+bool Node::IsInitialized() const {
   return true;
 }
 
 void Node::InternalSwap(Node* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.is_in_use_, lhs_arena,
-                                       &other->_impl_.is_in_use_, rhs_arena);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.label_, lhs_arena,
-                                       &other->_impl_.label_, rhs_arena);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.remaining_byte_, lhs_arena,
-                                       &other->_impl_.remaining_byte_, rhs_arena);
-  ::google::protobuf::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(Node, _impl_.first_property_id_)
-      + sizeof(Node::_impl_.first_property_id_)
-      - PROTOBUF_FIELD_OFFSET(Node, _impl_.id_)>(
-          reinterpret_cast<char*>(&_impl_.id_),
-          reinterpret_cast<char*>(&other->_impl_.id_));
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  is_in_use_.Swap(&other->is_in_use_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  label_.Swap(&other->label_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  remaining_byte_.Swap(&other->remaining_byte_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(Node, first_property_id_)
+      + sizeof(Node::first_property_id_)
+      - PROTOBUF_FIELD_OFFSET(Node, id_)>(
+          reinterpret_cast<char*>(&id_),
+          reinterpret_cast<char*>(&other->id_));
 }
 
-::google::protobuf::Metadata Node::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_graph_5fclasses_2eproto_getter, &descriptor_table_graph_5fclasses_2eproto_once,
-      file_level_metadata_graph_5fclasses_2eproto[0]);
+::PROTOBUF_NAMESPACE_ID::Metadata Node::GetMetadata() const {
+  return GetMetadataStatic();
 }
+
+
 // ===================================================================
 
+void Relationship::InitAsDefaultInstance() {
+}
 class Relationship::_Internal {
  public:
 };
 
-Relationship::Relationship(::google::protobuf::Arena* arena)
-    : ::google::protobuf::Message(arena) {
-  SharedCtor(arena);
+Relationship::Relationship(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
   // @@protoc_insertion_point(arena_constructor:Relationship)
 }
-Relationship::Relationship(const Relationship& from) : ::google::protobuf::Message() {
-  Relationship* const _this = this;
-  (void)_this;
-  new (&_impl_) Impl_{
-      decltype(_impl_.relationship_type_){},
-      decltype(_impl_.start_node_id_){},
-      decltype(_impl_.end_node_id_){},
-      /*decltype(_impl_._cached_size_)*/ {},
-  };
-  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
-      from._internal_metadata_);
-  _impl_.relationship_type_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.relationship_type_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+Relationship::Relationship(const Relationship& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  relationship_type_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_relationship_type().empty()) {
-    _this->_impl_.relationship_type_.Set(from._internal_relationship_type(), _this->GetArenaForAllocation());
+    relationship_type_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_relationship_type(),
+      GetArena());
   }
-  ::memcpy(&_impl_.start_node_id_, &from._impl_.start_node_id_,
-    static_cast<::size_t>(reinterpret_cast<char*>(&_impl_.end_node_id_) -
-    reinterpret_cast<char*>(&_impl_.start_node_id_)) + sizeof(_impl_.end_node_id_));
-
+  ::memcpy(&start_node_id_, &from.start_node_id_,
+    static_cast<size_t>(reinterpret_cast<char*>(&end_node_id_) -
+    reinterpret_cast<char*>(&start_node_id_)) + sizeof(end_node_id_));
   // @@protoc_insertion_point(copy_constructor:Relationship)
 }
-inline void Relationship::SharedCtor(::_pb::Arena* arena) {
-  (void)arena;
-  new (&_impl_) Impl_{
-      decltype(_impl_.relationship_type_){},
-      decltype(_impl_.start_node_id_){0},
-      decltype(_impl_.end_node_id_){0},
-      /*decltype(_impl_._cached_size_)*/ {},
-  };
-  _impl_.relationship_type_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.relationship_type_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-}
-Relationship::~Relationship() {
-  // @@protoc_insertion_point(destructor:Relationship)
-  _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
-  SharedDtor();
-}
-inline void Relationship::SharedDtor() {
-  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.relationship_type_.Destroy();
-}
-void Relationship::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
+
+void Relationship::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_Relationship_graph_5fclasses_2eproto.base);
+  relationship_type_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  ::memset(&start_node_id_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&end_node_id_) -
+      reinterpret_cast<char*>(&start_node_id_)) + sizeof(end_node_id_));
 }
 
-PROTOBUF_NOINLINE void Relationship::Clear() {
+Relationship::~Relationship() {
+  // @@protoc_insertion_point(destructor:Relationship)
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+void Relationship::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
+  relationship_type_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+
+void Relationship::ArenaDtor(void* object) {
+  Relationship* _this = reinterpret_cast< Relationship* >(object);
+  (void)_this;
+}
+void Relationship::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void Relationship::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const Relationship& Relationship::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_Relationship_graph_5fclasses_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void Relationship::Clear() {
 // @@protoc_insertion_point(message_clear_start:Relationship)
-  ::uint32_t cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.relationship_type_.ClearToEmpty();
-  ::memset(&_impl_.start_node_id_, 0, static_cast<::size_t>(
-      reinterpret_cast<char*>(&_impl_.end_node_id_) -
-      reinterpret_cast<char*>(&_impl_.start_node_id_)) + sizeof(_impl_.end_node_id_));
-  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+  relationship_type_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  ::memset(&start_node_id_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&end_node_id_) -
+      reinterpret_cast<char*>(&start_node_id_)) + sizeof(end_node_id_));
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* Relationship::_InternalParse(
-    const char* ptr, ::_pbi::ParseContext* ctx) {
-  ptr = ::_pbi::TcParser::ParseLoop(this, ptr, ctx, &_table_.header);
+const char* Relationship::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // int32 start_node_id = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
+          start_node_id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // int32 end_node_id = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
+          end_node_id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string relationship_type = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          auto str = _internal_mutable_relationship_type();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "Relationship.relationship_type"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
   return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
 }
 
-
-PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<2, 3, 0, 38, 2> Relationship::_table_ = {
-  {
-    0,  // no _has_bits_
-    0, // no _extensions_
-    3, 24,  // max_field_number, fast_idx_mask
-    offsetof(decltype(_table_), field_lookup_table),
-    4294967288,  // skipmap
-    offsetof(decltype(_table_), field_entries),
-    3,  // num_field_entries
-    0,  // num_aux_entries
-    offsetof(decltype(_table_), field_names),  // no aux_entries
-    &_Relationship_default_instance_._instance,
-    ::_pbi::TcParser::GenericFallback,  // fallback
-  }, {{
-    {::_pbi::TcParser::MiniParse, {}},
-    // int32 start_node_id = 1;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(Relationship, _impl_.start_node_id_), 63>(),
-     {8, 63, 0, PROTOBUF_FIELD_OFFSET(Relationship, _impl_.start_node_id_)}},
-    // int32 end_node_id = 2;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(Relationship, _impl_.end_node_id_), 63>(),
-     {16, 63, 0, PROTOBUF_FIELD_OFFSET(Relationship, _impl_.end_node_id_)}},
-    // string relationship_type = 3;
-    {::_pbi::TcParser::FastUS1,
-     {26, 63, 0, PROTOBUF_FIELD_OFFSET(Relationship, _impl_.relationship_type_)}},
-  }}, {{
-    65535, 65535
-  }}, {{
-    // int32 start_node_id = 1;
-    {PROTOBUF_FIELD_OFFSET(Relationship, _impl_.start_node_id_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
-    // int32 end_node_id = 2;
-    {PROTOBUF_FIELD_OFFSET(Relationship, _impl_.end_node_id_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
-    // string relationship_type = 3;
-    {PROTOBUF_FIELD_OFFSET(Relationship, _impl_.relationship_type_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
-  }},
-  // no aux_entries
-  {{
-    "\14\0\0\21\0\0\0\0"
-    "Relationship"
-    "relationship_type"
-  }},
-};
-
-::uint8_t* Relationship::_InternalSerialize(
-    ::uint8_t* target,
-    ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+::PROTOBUF_NAMESPACE_ID::uint8* Relationship::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:Relationship)
-  ::uint32_t cached_has_bits = 0;
-  (void)cached_has_bits;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
 
   // int32 start_node_id = 1;
-  if (this->_internal_start_node_id() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::
-        WriteInt32ToArrayWithField<1>(
-            stream, this->_internal_start_node_id(), target);
+  if (this->start_node_id() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->_internal_start_node_id(), target);
   }
 
   // int32 end_node_id = 2;
-  if (this->_internal_end_node_id() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::
-        WriteInt32ToArrayWithField<2>(
-            stream, this->_internal_end_node_id(), target);
+  if (this->end_node_id() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->_internal_end_node_id(), target);
   }
 
   // string relationship_type = 3;
-  if (!this->_internal_relationship_type().empty()) {
-    const std::string& _s = this->_internal_relationship_type();
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "Relationship.relationship_type");
-    target = stream->WriteStringMaybeAliased(3, _s, target);
+  if (this->relationship_type().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_relationship_type().data(), static_cast<int>(this->_internal_relationship_type().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "Relationship.relationship_type");
+    target = stream->WriteStringMaybeAliased(
+        3, this->_internal_relationship_type(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target =
-        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-            _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:Relationship)
   return target;
 }
 
-::size_t Relationship::ByteSizeLong() const {
+size_t Relationship::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:Relationship)
-  ::size_t total_size = 0;
+  size_t total_size = 0;
 
-  ::uint32_t cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // string relationship_type = 3;
-  if (!this->_internal_relationship_type().empty()) {
-    total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_relationship_type());
+  if (this->relationship_type().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_relationship_type());
   }
 
   // int32 start_node_id = 1;
-  if (this->_internal_start_node_id() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
+  if (this->start_node_id() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
         this->_internal_start_node_id());
   }
 
   // int32 end_node_id = 2;
-  if (this->_internal_end_node_id() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
+  if (this->end_node_id() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
         this->_internal_end_node_id());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::google::protobuf::Message::ClassData Relationship::_class_data_ = {
-    ::google::protobuf::Message::CopyWithSourceCheck,
-    Relationship::MergeImpl
-};
-const ::google::protobuf::Message::ClassData*Relationship::GetClassData() const { return &_class_data_; }
+void Relationship::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:Relationship)
+  GOOGLE_DCHECK_NE(&from, this);
+  const Relationship* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Relationship>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:Relationship)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:Relationship)
+    MergeFrom(*source);
+  }
+}
 
-
-void Relationship::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
-  auto* const _this = static_cast<Relationship*>(&to_msg);
-  auto& from = static_cast<const Relationship&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:Relationship)
-  ABSL_DCHECK_NE(&from, _this);
-  ::uint32_t cached_has_bits = 0;
+void Relationship::MergeFrom(const Relationship& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:Relationship)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_relationship_type().empty()) {
-    _this->_internal_set_relationship_type(from._internal_relationship_type());
+  if (from.relationship_type().size() > 0) {
+    _internal_set_relationship_type(from._internal_relationship_type());
   }
-  if (from._internal_start_node_id() != 0) {
-    _this->_internal_set_start_node_id(from._internal_start_node_id());
+  if (from.start_node_id() != 0) {
+    _internal_set_start_node_id(from._internal_start_node_id());
   }
-  if (from._internal_end_node_id() != 0) {
-    _this->_internal_set_end_node_id(from._internal_end_node_id());
+  if (from.end_node_id() != 0) {
+    _internal_set_end_node_id(from._internal_end_node_id());
   }
-  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void Relationship::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:Relationship)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
 }
 
 void Relationship::CopyFrom(const Relationship& from) {
@@ -747,34 +729,36 @@ void Relationship::CopyFrom(const Relationship& from) {
   MergeFrom(from);
 }
 
-PROTOBUF_NOINLINE bool Relationship::IsInitialized() const {
+bool Relationship::IsInitialized() const {
   return true;
 }
 
 void Relationship::InternalSwap(Relationship* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.relationship_type_, lhs_arena,
-                                       &other->_impl_.relationship_type_, rhs_arena);
-  ::google::protobuf::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(Relationship, _impl_.end_node_id_)
-      + sizeof(Relationship::_impl_.end_node_id_)
-      - PROTOBUF_FIELD_OFFSET(Relationship, _impl_.start_node_id_)>(
-          reinterpret_cast<char*>(&_impl_.start_node_id_),
-          reinterpret_cast<char*>(&other->_impl_.start_node_id_));
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  relationship_type_.Swap(&other->relationship_type_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(Relationship, end_node_id_)
+      + sizeof(Relationship::end_node_id_)
+      - PROTOBUF_FIELD_OFFSET(Relationship, start_node_id_)>(
+          reinterpret_cast<char*>(&start_node_id_),
+          reinterpret_cast<char*>(&other->start_node_id_));
 }
 
-::google::protobuf::Metadata Relationship::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_graph_5fclasses_2eproto_getter, &descriptor_table_graph_5fclasses_2eproto_once,
-      file_level_metadata_graph_5fclasses_2eproto[1]);
+::PROTOBUF_NAMESPACE_ID::Metadata Relationship::GetMetadata() const {
+  return GetMetadataStatic();
 }
+
+
 // @@protoc_insertion_point(namespace_scope)
-namespace google {
-namespace protobuf {
-}  // namespace protobuf
-}  // namespace google
+PROTOBUF_NAMESPACE_OPEN
+template<> PROTOBUF_NOINLINE ::Node* Arena::CreateMaybeMessage< ::Node >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::Node >(arena);
+}
+template<> PROTOBUF_NOINLINE ::Relationship* Arena::CreateMaybeMessage< ::Relationship >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::Relationship >(arena);
+}
+PROTOBUF_NAMESPACE_CLOSE
+
 // @@protoc_insertion_point(global_scope)
-#include "google/protobuf/port_undef.inc"
+#include <google/protobuf/port_undef.inc>
