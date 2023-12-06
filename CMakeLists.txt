@@ -43,6 +43,35 @@ else()
         message(FATAL_ERROR "-- Cannot find Protobuf")
 endif()
 
+include(FetchContent)
+
+FetchContent_Declare(fmt
+  GIT_REPOSITORY https://github.com/fmtlib/fmt.git
+  GIT_TAG 10.1.1
+)
+
+# Download gtest lib
+include(FetchContent)
+set(FETCHCONTENT_BASE_DIR ${PROJECT_SOURCE_DIR}/third_party CACHE PATH "Missing description." FORCE)
+FetchContent_Declare(
+  googletest
+  GIT_REPOSITORY https://github.com/google/googletest.git
+  GIT_TAG        release-1.11.0
+  CMAKE_CACHE_ARGS "${googletest_cmake_args}"
+)
+
+# Download benchmark lib
+FetchContent_Declare(googlebenchmark
+  GIT_REPOSITORY https://github.com/google/benchmark.git
+  GIT_TAG v1.8.3
+)
+
+FetchContent_MakeAvailable(
+    fmt
+    googletest
+    googlebenchmark
+)
+
 # CCache
 find_program(CCACHE_FOUND ccache)
 
