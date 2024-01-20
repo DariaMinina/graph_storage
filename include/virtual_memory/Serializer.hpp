@@ -23,7 +23,7 @@ public:
 
     template <typename T>
     static std::size_t deserialize_value(T &value, FileInfo *file_info, std::size_t offset) {
-        FileUtils::write_to_file(file_info, (uint8_t *)&value, sizeof(T), offset);
+        FileUtils::read_from_file(file_info, (uint8_t *)&value, sizeof(T), offset);
         return offset + sizeof(T);
     }
 
