@@ -1,6 +1,7 @@
 #include "storage/FileUtils.hpp"
 #include "fmt/format.h"
 #include "storage/FileInfo.hpp"
+#include <cerrno>
 #include <cstdint>
 #include <fcntl.h>
 #include <memory>
@@ -12,9 +13,12 @@ namespace graph_storage {
 namespace storage {
 
 std::unique_ptr<FileInfo> FileUtils::open_file(const std::string &path, const int flags) {
-    int fd = open(path.c_str(), flags);
-    if (fd == -1) {
-        throw std::runtime_error("Cannot open file: " + path);
+    int fd = open(path.c_str(), flags | (O_CREAT | O_EXCL), 0644);
+    if ((fd < 0) | (errno == EEXIST)) {
+        fd = open(path.c_str(), flags & ~(O_CREAT | O_EXCL), 0644);
+        if ((fd < 0) | (errno == ENOENT)) {
+            throw std::runtime_error(fmt::format("Cannot open file: {}. fd: {}, errno: {}", path, fd, errno));
+        }
     }
     return std::make_unique<FileInfo>(path, fd);
 }

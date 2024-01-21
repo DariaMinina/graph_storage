@@ -1,0 +1,10 @@
+include_directories(${CMAKE_BINARY_DIR}/protoc)
+include(FindProtobuf)
+find_package(protobuf CONFIG REQUIRED)
+
+add_executable(serialization serialization.cpp)
+# target_link_libraries(serialization benchmark::benchmark ${PROJECT_NAME}_lib)
+target_link_libraries(serialization benchmark::benchmark ${PROJECT_NAME}_lib Node ${Protobuf_LIBRARIES})
+# target_link_libraries(serialization benchmark::benchmark ${PROJECT_NAME}_lib protobuf_objects ${Protobuf_LIBRARIES})
+target_include_directories(serialization PUBLIC ${PROJECT_SOURCE_DIR}/include)
+target_include_directories(serialization PUBLIC ${PROJECT_SOURCE_DIR}/include ${Protobuf_INCLUDE_DIRS})

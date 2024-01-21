@@ -1,0 +1,11 @@
+syntax = "proto3";
+package graph.proto;
+
+message Node {
+    string is_in_use = 1;
+    int32 first_relationship_id = 3;
+    int32 id = 2;
+    int32 first_property_id = 4;
+    string label = 5;
+    string remaining_byte = 6;
+}

@@ -26,15 +26,6 @@ mark_as_advanced(
 # Code completion. Generates compile_commands.json
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-find_package(Protobuf REQUIRED)
-
-# check if protobuf was found
-if(PROTOBUF_FOUND)
-        message("-- protobuf found")
-else()
-        message(FATAL_ERROR "-- Cannot find Protobuf")
-endif()
-
 include(FetchContent)
 
 FetchContent_Declare(fmt
@@ -42,8 +33,13 @@ FetchContent_Declare(fmt
   GIT_TAG 10.1.1
 )
 
-# Download gtest lib
-include(FetchContent)
+FetchContent_Declare(protobuf
+  GIT_REPOSITORY https://github.com/protocolbuffers/protobuf.git
+  GIT_TAG        v25.2
+  SOURCE_SUBDIR  cmake
+  FIND_PACKAGE_ARGS NAMES protobuf
+)
+
 set(FETCHCONTENT_BASE_DIR ${PROJECT_SOURCE_DIR}/third_party CACHE PATH "Missing description." FORCE)
 FetchContent_Declare(
   googletest
@@ -60,6 +56,7 @@ FetchContent_Declare(googlebenchmark
 
 FetchContent_MakeAvailable(
     fmt
+    protobuf
     googletest
     googlebenchmark
 )
@@ -72,8 +69,11 @@ if(CCACHE_FOUND)
         set_property(GLOBAL PROPERTY RULE_LAUNCH_LINK ccache)
 endif(CCACHE_FOUND)
 
+add_subdirectory(protoc)
 add_subdirectory(src)
 
 # Testing
 enable_testing()
 add_subdirectory(test)
+
+add_subdirectory(benchmark)
