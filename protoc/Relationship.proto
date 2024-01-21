@@ -1,0 +1,8 @@
+syntax = "proto3";
+package graph.proto;
+
+message Relationship {
+    int32 start_node_id = 1;
+    int32 end_node_id = 2;
+    string relationship_type = 3;
+}
